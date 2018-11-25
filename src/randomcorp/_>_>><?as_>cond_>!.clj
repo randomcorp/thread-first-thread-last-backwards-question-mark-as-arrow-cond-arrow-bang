@@ -30,7 +30,7 @@
         :-> (recur `(-> ~current-result ~(:form arg-map)) (rest clauses))
         :->> (recur `(->> ~current-result ~(:form arg-map)) (rest clauses))
         :<? (let [res (gensym "res")]
-              `(when-let [~res ~current-result]
+              `(when-some [~res ~current-result]
                  ~(construct-threading res (rest clauses))))
         :as-> (recur `(as-> ~current-result ~(:as arg-map) ~(:form arg-map)) (rest clauses))
         :cond-> (recur `(cond-> ~current-result ~(:pred arg-map) ~(:form arg-map)) (rest clauses))
