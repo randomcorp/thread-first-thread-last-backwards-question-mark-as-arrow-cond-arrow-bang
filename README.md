@@ -48,3 +48,7 @@ To make assertions about the values during the threading, use `:!`:
 
 ;; => Error!
 ```
+
+## License
+
+Free, as in beer.
