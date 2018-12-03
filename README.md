@@ -1,6 +1,6 @@
 # ->->><?as->cond->!
 
-_As seen in [Every Clojure Talk Ever](https://www.youtube.com/watch?v=jlPaby7suOc)_
+_As seen in [Every Clojure Talk Ever](https://www.youtube.com/watch?v=jlPaby7suOc) by [Amperity](https://github.com/amperity)_
 
 This is the bread and butter of randomcorp's Clojure code and we're
 excited to share it with the world. Have you been frustrated with
