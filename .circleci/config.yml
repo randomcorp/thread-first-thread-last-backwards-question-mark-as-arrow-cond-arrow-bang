@@ -1,0 +1,29 @@
+version: 2.1
+
+orbs:
+  re: aengelberg/rememborb@dev:27bd3ec
+  
+jobs:
+  remember:
+    docker:
+      - image: circleci/python:3.7
+    steps:
+      - re/member:
+          env_var: FOO
+          value: bar
+      - run: echo $FOO
+  recall:
+    docker:
+      - image: circleci/python:3.7
+    steps:
+      - re/call:
+          env_var: FOO
+      - run: echo $FOO
+
+workflows:
+  wf:
+    jobs:
+      - remember
+      - recall:
+          requires:
+            - remember
